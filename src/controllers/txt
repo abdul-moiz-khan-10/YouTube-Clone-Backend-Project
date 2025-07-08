@@ -1,0 +1,141 @@
+req.files : ->  [Object: null prototype] {
+  thumbnail: [
+    {
+      fieldname: 'thumbnail',
+      originalname: 'cat thumbnail.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg',
+      destination: './public/temp',
+      filename: 'cat thumbnail.jpg',
+      path: 'public\\temp\\cat thumbnail.jpg',
+      size: 7134
+    }
+  ],
+  videoFile: [
+    {
+      fieldname: 'videoFile',
+      originalname: 'videoplayback.mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: './public/temp',
+      filename: 'videoplayback.mp4',
+      path: 'public\\temp\\videoplayback.mp4',
+      size: 27473765
+    }
+  ]
+}
+video file : ->  {
+  asset_id: '9b67486b14a623adc195384ee6d7b611',
+  public_id: 'hy2qp6cilfgsdqpdlkhg',
+  version: 1750906802,
+  version_id: 'cdfe44eeae78360ff1584aaebbf62f25',
+  signature: '50496b45ef45c23a6d89ff722a2b383a20a19340',
+  width: 640,
+  height: 360,
+  format: 'mp4',
+  resource_type: 'video',
+  created_at: '2025-06-26T03:00:02Z',
+  tags: [],
+  pages: 0,
+  bytes: 27473765,
+  type: 'upload',
+  etag: 'ecde1a4db047da625d86eb2414fc5769',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dkuku9tq1/video/upload/v1750906802/hy2qp6cilfgsdqpdlkhg.mp4',
+  secure_url: 'https://res.cloudinary.com/dkuku9tq1/video/upload/v1750906802/hy2qp6cilfgsdqpdlkhg.mp4',
+  playback_url: 'https://res.cloudinary.com/dkuku9tq1/video/upload/sp_auto/v1750906802/hy2qp6cilfgsdqpdlkhg.m3u8',
+  asset_folder: '',
+  display_name: 'hy2qp6cilfgsdqpdlkhg',
+  audio: {
+    codec: 'aac',
+    bit_rate: '95999',
+    frequency: 44100,
+    channels: 2,
+    channel_layout: 'stereo'
+  },
+  video: {
+    pix_format: 'yuv420p',
+    codec: 'h264',
+    level: 30,
+    profile: 'Main',
+    bit_rate: '357899',
+    dar: '16:9',
+    time_base: '1/11988'
+  },
+  is_audio: false,
+  frame_rate: 29.97,
+  bit_rate: 456370,
+  duration: 481.605079,
+  rotation: 0,
+  original_filename: 'videoplayback',
+  nb_frames: 14432,
+  api_key: '621159663345624'
+}
+video object : -> {
+  videoFile: 'http://res.cloudinary.com/dkuku9tq1/video/upload/v1750906802/hy2qp6cilfgsdqpdlkhg.mp4',
+  thumbnail: 'http://res.cloudinary.com/dkuku9tq1/image/upload/v1750906791/zp5ojbwtlyqxz9zktlzq.jpg',
+  title: 'new cat video',
+  description: 'new cat video .....',
+  duration: 481.605079,
+  views: 0,
+  isPublished: true,
+  _id: new ObjectId('685cb7adbfb3818bcc47a936'),
+  createdAt: 2025-06-26T02:59:57.806Z,
+  updatedAt: 2025-06-26T02:59:57.806Z,
+  __v: 0
+}
+
+
+
+// all videos
+
+{
+  "statusCode":200,
+  "data":{
+    "videos":[
+      {
+        "_id":"685e89ffa0dd86f661b0e420",
+        "videoFile":"http://res.cloudinary.com/dkuku9tq1/video/upload/v1751026179/zutdvksby2dtn9ihobnl.mp4",
+        "thumbnail":"http://res.cloudinary.com/dkuku9tq1/image/upload/v1751026089/qwnldcpgoqq7fhhcnqps.jpg",
+        "title":"new video with use",
+        "views":1,
+        "owner":{
+          "_id":"68564307702d0231fc995d5c",
+          "username":"khan",
+          "avatar":"http://res.cloudinary.com/dkuku9tq1/image/upload/v1750483722/y6v4xrclvnke8aa9jb6y.png"
+          },
+        "createdAt":"2025-06-27T12:09:35.912Z"
+      },
+      {
+        "_id":"685cb7adbfb3818bcc47a936",
+        "videoFile":"http://res.cloudinary.com/dkuku9tq1/video/upload/v1750906802/hy2qp6cilfgsdqpdlkhg.mp4",
+        "thumbnail":"http://res.cloudinary.com/dkuku9tq1/image/upload/v1750906791/zp5ojbwtlyqxz9zktlzq.jpg",
+        "title":"new cat video",
+        "views":0,
+        "createdAt":"2025-06-26T02:59:57.806Z"
+      },
+      {
+        "_id":"685cb732c2caa72ee5d5058a",
+        "videoFile":"http://res.cloudinary.com/dkuku9tq1/video/upload/v1750906678/xbz1bfdhq5btqzyqq0wn.mp4",
+        "thumbnail":"http://res.cloudinary.com/dkuku9tq1/image/upload/v1750906667/mkhhzijb79gnxzbekp4s.jpg",
+        "title":"new cat video",
+        "views":12,
+        "createdAt":"2025-06-26T02:57:54.294Z"
+      },
+      {
+        "_id":"685cb595fb0919592c769287",
+        "videoFile":"http://res.cloudinary.com/dkuku9tq1/video/upload/v1750906265/fhtxqqgvezlpprcl62rv.mp4",
+        "thumbnail":"http://res.cloudinary.com/dkuku9tq1/image/upload/v1750906255/xngqh4egwxu0ejy9kn5i.jpg",
+        "title":"new cat video",
+        "views":6,
+        "createdAt":"2025-06-26T02:51:01.875Z"
+      }
+    ],
+    "pages":1,
+    "limits":10,
+    "totalVideos":4,
+    "totalPages":1
+  },
+  "message":"videos fetched successfully",
+  "success":true
+}
