@@ -3,6 +3,7 @@ import { ApiResponse } from "../utils/ApiResponse.js"
 import { Comment } from "../models/comment.model.js"
 import { Video } from "../models/video.model.js"
 import mongoose from "mongoose"
+import { asyncHandler } from "../utils/asyncHandler.js"
 
 const getVideoComments = asyncHandler(async (req, res) => {
     //TODO: get all comments for a video
@@ -19,12 +20,17 @@ const getVideoComments = asyncHandler(async (req, res) => {
     const sortOrder = sortType === "asc" ? 1 : -1
     const sort = { [sortField]: sortOrder }
 
+
     if (!mongoose.Types.ObjectId.isValid(videoId)) {
         throw new ApiError(400, "invalid video id")
     }
 
     const video = await Video.aggregate([
-        { $match: { _id: new mongoose.Types.ObjectId(videoId) } },
+        { $match: 
+            { 
+                _id: new mongoose.Types.ObjectId(videoId)
+            }
+        },
         {
             $lookup: {
                 from: "comments",

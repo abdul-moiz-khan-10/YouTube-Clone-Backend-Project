@@ -3,14 +3,14 @@ import { ApiError } from "../utils/ApiError.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 
 export const isOwner = (Model) => asyncHandler(async (req, res, next) => {
-    const { videoId } = req.params;
+    const { id } = req.params;
     const userId = req.user?._id;
 
-    if (!mongoose.Types.ObjectId.isValid(videoId)){
+    if (!mongoose.Types.ObjectId.isValid(id)){
         throw new ApiError(400, "Invalid request");
     }
 
-    const resource = await Model.findById(videoId);
+    const resource = await Model.findById(id);
 
     if (!resource) {
         throw new ApiError(404, "Resource Not Found");

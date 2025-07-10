@@ -8,6 +8,7 @@ import {
 } from "../controllers/comment.controller.js"
 import {verifyJWT} from "../middlewares/auth.middleware.js"
 import { isOwner } from '../middlewares/isOwner.middleware.js';
+import { Comment } from '../models/comment.model.js';
 
 const router = Router();
 
