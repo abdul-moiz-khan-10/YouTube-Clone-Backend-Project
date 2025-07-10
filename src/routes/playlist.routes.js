@@ -21,11 +21,11 @@ router.route("/").post(createPlaylist)
 router
     .route("/:playlistId")
     .get(getPlaylistById)
-    .patch(isOwner(Playlist),updatePlaylist)
-    .delete(isOwner(Playlist),deletePlaylist);
+    .patch(isOwner(Playlist, "playlistId"),updatePlaylist)
+    .delete(isOwner(Playlist, "playlistId"),deletePlaylist);
 
-router.route("/add/:videoId/:playlistId").patch(isOwner(Playlist),addVideoToPlaylist);
-router.route("/remove/:videoId/:playlistId").patch(isOwner(Playlist),removeVideoFromPlaylist);
+router.route("/add/:videoId/:playlistId").patch(isOwner(Playlist, "playlistId"),addVideoToPlaylist);
+router.route("/remove/:videoId/:playlistId").patch(isOwner(Playlist, "playlistId"),removeVideoFromPlaylist);
 
 router.route("/user/:userId").get(getUserPlaylists);
 

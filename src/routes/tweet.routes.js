@@ -14,6 +14,6 @@ router.use(verifyJWT); // Apply verifyJWT middleware to all routes in this file
 
 router.route("/").post(createTweet);
 router.route("/user/:userId").get(getUserTweets);
-router.route("/:tweetId").patch(isOwner(Tweet),updateTweet).delete(isOwner(Tweet),deleteTweet);
+router.route("/:tweetId").patch(isOwner(Tweet,"tweetId"),updateTweet).delete(isOwner(Tweet, "tweetId"),deleteTweet);
 
 export default router
